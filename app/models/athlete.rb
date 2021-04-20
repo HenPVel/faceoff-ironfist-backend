@@ -5,5 +5,5 @@ class Athlete < ApplicationRecord
     has_many :trash_talks
     has_many :private_trash_talks
     has_many :challenges, through: :private_trash_talks
-  
+    
 end

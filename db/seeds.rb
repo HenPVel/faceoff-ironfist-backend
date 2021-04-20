@@ -13,8 +13,8 @@ Attempt.reset_pk_sequence
 Challenge.reset_pk_sequence
 Athlete.reset_pk_sequence
 
-athlete1 = Athlete.create(name: "henry velasquez", age: 28, years_of_experience: 13, ethnicity: "filipino", skill_level:"Advanced", weight_in_lbs: 206, height_in_inches: 69, username:"hankvella", password:"abc123", active: true )
-athlete2 = Athlete.create(name: "menachem futerfas", age: 28, years_of_experience: 15, skill_level:"Advanced", weight_in_lbs: 185, height_in_inches: 71, username:"mfuterfas", password:"abc123", active: true )
+athlete1 = Athlete.create(name: "henry velasquez", age: 28, years_of_experience: 13, ethnicity: "filipino", skill_level:"Advanced", weight_in_lbs: 206, height_in_inches: 69, username:"hankvella", password:"abc123", active: true, email:"hvelas93@gmail.com" )
+athlete2 = Athlete.create(name: "menachem futerfas", age: 28, years_of_experience: 15, skill_level:"Advanced", weight_in_lbs: 185, height_in_inches: 71, username:"mfuterfas", password:"abc123", active: true, email:"flatiron@gmail.com")
 
 challenge1 = Challenge.create(name:"20 Rep Squat",
         description: "Do 20 consecutive barbell squats at max weight. You cannot put the weight down at any point until the 20 squats are finished.",
