@@ -11,7 +11,7 @@ class AthletesController < ApplicationController
     end
 
     def create
-        new_athlete = Athlete.create!(athlete_params)
+        new_athlete = Athlete.create!(athlete_sign_up_params)
         render json: new_athlete
     end
 
