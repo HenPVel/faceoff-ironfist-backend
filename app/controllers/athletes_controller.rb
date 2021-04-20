@@ -27,6 +27,16 @@ class AthletesController < ApplicationController
         render json: athlete
     end
 
+    def login
+        athlete = Athlete.find_by!(login_params)
+
+        if athlete
+        render json: athlete
+        else
+        render json: athlete.errors.full_messages
+        end
+        
+    end
 
     private
 
@@ -36,6 +46,10 @@ class AthletesController < ApplicationController
 
     def athlete_update_params
         params.permit(:email, :name, :age, :years_of_experience, :reason_for_training, :ethnicity, :body_type, :skill_level, :weight_in_lbs, :height_in_inches, :preexisting_injuries, :username, :password, :active )
+    end
+
+    def login_params
+        params.permit(:email, :password)
     end
     
     

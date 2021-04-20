@@ -8,6 +8,5 @@ class ChallengeSerializer < ActiveModel::Serializer
               :min_time,
               :max_time,
               :muscle_group,
-              :image,
-              :test
+              :image
 end
