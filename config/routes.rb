@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   post "/athletes/login", to: "athletes#login"
+  get  "/challenges/rankings/:id", to: "challenges#showChallengeRanks"
   resources :private_trash_talks
   resources :trash_talks
   resources :challenges
