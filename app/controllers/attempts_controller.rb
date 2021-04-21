@@ -10,4 +10,17 @@ class AttemptsController < ApplicationController
         render json: attempt
     end
 
+    def create
+        new_attempt = Attempt.create!(attempt_params)
+        render json: new_attempt
+    end
+
+private
+
+def attempt_params
+    params.permit(:challenge_id, :athlete_id, :reps)
+end
+    
+
+
 end
