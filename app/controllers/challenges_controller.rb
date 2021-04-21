@@ -11,8 +11,18 @@ class ChallengesController < ApplicationController
     end
 
     def showChallengeRanks
+
+        if params[:id] == "3"
         challenge = Challenge.find(params[:id])
-        render json: challenge.challenge_ranker
+        render json: challenge.plank_challenge_ranker
+        elsif params[:id] == "2"
+        challenge = Challenge.find(params[:id])
+        render json: challenge.pushup_challenge_ranker
+        end
+
     end
+
+
+
 
 end

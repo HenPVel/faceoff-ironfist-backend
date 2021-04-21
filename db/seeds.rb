@@ -45,6 +45,10 @@ attempt2 = Attempt.create(challenge_id: 1, athlete_id: 2, user_description_of_at
     Attempt.create(challenge_id: 3, athlete_id: rand(1..6), user_description_of_attempt: "#BRUTAL, ALMOST PASSED OUT", goal_time_achieved: rand(1..600), proof: "https://www.youtube.com/watch?v=OV2HMIGjuuw" )
 end
 
+70.times do
+    Attempt.create(challenge_id: 2, athlete_id: rand(1..6), user_description_of_attempt: "CHEST 'BOUT TO FALL OFF", reps: rand(10..175), proof: "https://www.youtube.com/watch?v=JMYUQF6oILs" )
+end
+
 
 trashtalk1 = TrashTalk.create(athlete_id:1, challenge_id:1, receiver_id:2, comment:"Beat that!" )
 trashtalk2 = TrashTalk.create(athlete_id:2, challenge_id:1, receiver_id:1, comment:"BEASTMODE!")
