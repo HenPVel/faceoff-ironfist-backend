@@ -21,9 +21,10 @@ class Challenge < ApplicationRecord
 
         unique_ids.each do |id|
             longest_attempt = self.attempts.where(athlete_id: id).sort_by{|obj| obj.time}.reverse[0].time
-            attempt_times << {"name" => "#{self.attempts.where(athlete_id: id).first.athlete.name}", "time" => longest_attempt, "score" => (longest_attempt-average)/5}
+            attempt_times << {"name" => "#{self.attempts.where(athlete_id: id).first.athlete.name}", "time" => longest_attempt, "score" => (longest_attempt-average)/3.0}
         end
 
+        
         return attempt_times
         
     end
@@ -48,9 +49,9 @@ class Challenge < ApplicationRecord
 
         unique_ids.each do |id|
             best_attempt = self.attempts.where(athlete_id: id).sort_by{|obj| obj.reps}.reverse[0].reps
-            attempt_reps << {"name" => "#{self.attempts.where(athlete_id: id).first.athlete.name}", "reps" => best_attempt, "score" => (best_attempt-average)/5}
+            attempt_reps << {"name" => "#{self.attempts.where(athlete_id: id).first.athlete.name}", "reps" => best_attempt, "score" => (best_attempt-average)/4.0}
         end
-
+     
         return attempt_reps
 
     end
