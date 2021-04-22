@@ -29,7 +29,7 @@ challenge1 = Challenge.create(name:"20 Rep Squat",
     min_reps: 20,
     skill_level:"Advanced",
     muscle_group:"Legs")
-challenge2 = Challenge.create(name: "Max Consecutive Pushups",
+challenge2 = Challenge.create(name: "Max Consecutive Pushups in 5 Minutes",
         description: "Do as many full range, body-weight pushups as you can without resting.",
     skill_level:"Beginner",
     muscle_group:"Chest" )
