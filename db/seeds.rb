@@ -38,11 +38,11 @@ challenge3 = Challenge.create(name: "Bodyweight Plank Hold",
         skill_level:"Beginner",
         muscle_group:"Abdominals")
 
-attempt1 = Attempt.create(challenge_id: 1, athlete_id: 1, user_description_of_attempt: "20 rep set at 275lbs", max_weight: 275, proof:"https://www.youtube.com/watch?v=sbFGdpQD_O0", reps:20)
-attempt2 = Attempt.create(challenge_id: 1, athlete_id: 2, user_description_of_attempt: "20 rep set at 135lbs. Legs were shaking!", max_weight: 135, proof:"https://www.youtube.com/watch?v=2bE_Q7fmEKs", reps:20)
+attempt1 = Attempt.create(challenge_id: 1, athlete_id: 1, user_description_of_attempt: "20 rep set at 275lbs", weight: 275, proof:"https://www.youtube.com/watch?v=sbFGdpQD_O0", reps:20)
+attempt2 = Attempt.create(challenge_id: 1, athlete_id: 2, user_description_of_attempt: "20 rep set at 135lbs. Legs were shaking!", weight: 135, proof:"https://www.youtube.com/watch?v=2bE_Q7fmEKs", reps:20)
 
 70.times do
-    Attempt.create(challenge_id: 3, athlete_id: rand(1..6), user_description_of_attempt: "#BRUTAL, ALMOST PASSED OUT", goal_time_achieved: rand(1..600), proof: "https://www.youtube.com/watch?v=OV2HMIGjuuw" )
+    Attempt.create(challenge_id: 3, athlete_id: rand(1..6), user_description_of_attempt: "#BRUTAL, ALMOST PASSED OUT", time: rand(1..600), proof: "https://www.youtube.com/watch?v=OV2HMIGjuuw" )
 end
 
 70.times do

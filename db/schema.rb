@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_20_150454) do
+ActiveRecord::Schema.define(version: 2021_04_22_142134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 2021_04_20_150454) do
     t.integer "challenge_id"
     t.integer "athlete_id"
     t.string "user_description_of_attempt"
-    t.integer "max_weight"
-    t.integer "goal_time_achieved"
+    t.integer "weight"
+    t.integer "time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "proof"

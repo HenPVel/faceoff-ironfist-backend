@@ -18,7 +18,7 @@ class AttemptsController < ApplicationController
 private
 
 def attempt_params
-    params.permit(:challenge_id, :athlete_id, :reps)
+    params.permit(:challenge_id, :athlete_id, :reps, :weight, :time)
 end
     
 
