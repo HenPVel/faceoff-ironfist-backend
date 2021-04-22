@@ -12,7 +12,7 @@ class Challenge < ApplicationRecord
         unique_ids = all_ids.uniq
         
         unique_ids.each do |id|
-            attempt_times_calc << self.attempts.where(athlete_id: id).sort_by{|obj| obj.goal_time_achieved}.reverse[0].goal_time_achieved
+            attempt_times_calc << self.attempts.where(athlete_id: id).sort_by{|obj| obj.time}.reverse[0].time
         end
 
         average = attempt_times_calc.reduce(0,:+)/(attempt_times_calc.length)
@@ -20,7 +20,7 @@ class Challenge < ApplicationRecord
 
 
         unique_ids.each do |id|
-            longest_attempt = self.attempts.where(athlete_id: id).sort_by{|obj| obj.goal_time_achieved}.reverse[0].goal_time_achieved
+            longest_attempt = self.attempts.where(athlete_id: id).sort_by{|obj| obj.time}.reverse[0].time
             attempt_times << {"name" => "#{self.attempts.where(athlete_id: id).first.athlete.name}", "time" => longest_attempt, "score" => (longest_attempt-average)/5}
         end
 
