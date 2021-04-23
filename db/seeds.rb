@@ -28,6 +28,7 @@ challenge1 = Challenge.create(name:"20 Rep Squat",
         description: "Do 20 consecutive barbell squats at max weight. You cannot put the weight down at any point until the 20 squats are finished.",
     min_reps: 20,
     skill_level:"Advanced",
+    max_time: 15,
     muscle_group:"Legs")
 challenge2 = Challenge.create(name: "Max Consecutive Pushups in 5 Minutes",
         description: "Do as many full range, body-weight pushups as you can without resting.",
